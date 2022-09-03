@@ -48,6 +48,7 @@ const displayNewsDetails = (newses) => {
     divContainer.innerHTML = ``;
     const cardNumber = document.getElementById('crd-number');
     cardNumber.innerText = newses.length;
+    // short work 
     const shortFind = newses.sort((x, y) => {
         if (x.total_view < y.total_view) {
             return 1;
@@ -56,6 +57,8 @@ const displayNewsDetails = (newses) => {
             return -1
         }
     })
+
+
     newses.forEach(news => {
         // console.log(news._id);
 
