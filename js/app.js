@@ -99,9 +99,7 @@ const displayNewsDetails = (newses) => {
 
 }
 
-// stop spinner loader
 
-// spinner working here 
 
 const toggleSpiner = isLoading => {
     const loaderSection = document.getElementById('loader');
@@ -117,7 +115,7 @@ const toggleSpiner = isLoading => {
 
 // part-3
 const loadMoreDetails = async (id2) => {
-    // console.log(id2);
+
     const url = ` https://openapi.programming-hero.com/api/news/${id2}`;
     const res = await fetch(url);
     const data = await res.json();
