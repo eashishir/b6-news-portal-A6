@@ -7,9 +7,11 @@ const loadCategorys = async () => {
 
 const displayNavCategory = (navbers) => {
 
+
     const navContainer = document.getElementById('nav-container');
     navbers.forEach(navbar => {
         // console.log(navbar.category_id)
+
 
         const navli = document.createElement('li');
         navli.classList.add('navbar-nav');
@@ -40,9 +42,12 @@ const loadNewsDetails = async (id) => {
 
 
 const displayNewsDetails = (newses) => {
+    toggleSpiner(true);
 
     const divContainer = document.getElementById('div-container');
     divContainer.innerHTML = ``;
+    const cardNumber = document.getElementById('crd-number');
+    cardNumber.innerText = newses.length;
     newses.forEach(news => {
         // console.log(news._id);
 
@@ -74,6 +79,7 @@ const displayNewsDetails = (newses) => {
         `;
 
         divContainer.appendChild(newsDiv);
+        toggleSpiner(false);
 
     });
 
@@ -122,8 +128,9 @@ const displayModalDetails = modal => {
     `
 }
 
-
+loadNewsDetails('01');
 
 loadCategorys();
+
 
 
