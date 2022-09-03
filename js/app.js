@@ -81,7 +81,7 @@ const displayNewsDetails = (newses) => {
                 <p><i class="fa-regular fa-eye"></i>${news.total_view ? news.total_view : 'Not found'}M</p>
             </div>
             <p>${news.author.published_date ? news.author.published_date : 'No time data found'}</p>
-            <button onclick="loadMoreDetails('${news._id}')"  href="#" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#newsDetailModal">Show More</button>
+            <button onclick="loadMoreDetails('${news._id}')"  href="#" class="btn btn-success"data-bs-toggle="modal" data-bs-target="#newsDetailModal">Show More</button>
 
           
         </div>
