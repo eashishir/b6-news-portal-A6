@@ -8,7 +8,7 @@ const loadCategorys = async () => {
 const displayNavCategory = (navbers) => {
 
 
-    const navContainer = document.getElementById('nav-container');
+    const navContainer = document.getElementById('navbarNav');
     navbers.forEach(navbar => {
         // console.log(navbar.category_id)
 
@@ -48,6 +48,14 @@ const displayNewsDetails = (newses) => {
     divContainer.innerHTML = ``;
     const cardNumber = document.getElementById('crd-number');
     cardNumber.innerText = newses.length;
+    const shortFind = newses.sort((x, y) => {
+        if (x.total_view < y.total_view) {
+            return 1;
+        }
+        else {
+            return -1
+        }
+    })
     newses.forEach(news => {
         // console.log(news._id);
 
